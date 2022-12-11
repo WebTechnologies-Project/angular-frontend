@@ -1,0 +1,27 @@
+.card {
+    width: 400px;
+    border: 1px solid silver;
+    display:flex;
+    flex-direction: column;
+
+
+
+.head {
+    text-align: center;
+    font-size : 2rem;
+    border-bottom: 1px sold black;
+    padding-bottom: 5px;
+}
+
+.body {
+    flex: 1;
+    width: 100%;
+    img {
+        width: 100%
+    }
+}
+.actions {
+    display: flex;
+    justify-content: end;
+}
+}

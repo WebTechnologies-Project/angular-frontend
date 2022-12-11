@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+// se aplica peste tot
+*{
+    box-sizing: border-box;
+}
+
+// normalizarea site
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+

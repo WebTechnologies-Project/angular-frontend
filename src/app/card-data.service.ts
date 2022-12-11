@@ -1,17 +1,10 @@
-import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Card } from './app.component';
 
-export interface Card{
-  title: string,
-  bodyText: string,
-  showImg: boolean,
-  url:string
-}
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+@Injectable({
+  providedIn: 'root'
 })
-export class AppComponent {
+export class CardDataService {
   cards: Card[] = [
     {
       title: 'Card 1',
@@ -32,4 +25,10 @@ export class AppComponent {
       url:'https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg'}
     
   ]
+
+  constructor() { }
+
+  get getCards() {
+    return this.cards;
+  }
 }
