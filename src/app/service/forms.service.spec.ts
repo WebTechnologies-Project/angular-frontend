@@ -1,13 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CardDataService } from './card-data.service';
+import { FormsService } from './forms.service';
 
-describe('CardDataService', () => {
-  let service: CardDataService;
+
+describe('FormsService', () => {
+  let service: FormsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CardDataService);
+    service = TestBed.inject(FormsService);
   });
 
   it('should be created', () => {
