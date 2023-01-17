@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Answer } from '../models/answer';
 import { Form } from '../models/form';
 import { FormsService } from '../service/forms.service';
 
@@ -12,16 +13,23 @@ export class FormComponent implements OnInit {
 
   @Input() form: Form;
   formId: number;
-  constructor(private formsService: FormsService, private route: ActivatedRoute) { }
+  answers: Answer[] = [];
+  
+  constructor(private formsService: FormsService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       const id = params['id'];
+      this.formId = params['id'];
       this.formsService.getForm(id).subscribe(form => {
         this.form = form;
       });
     });
   }
+  goBack() {
+    this.router.navigate(['/platform']);
+  }
+  
 
   
 

@@ -1,6 +1,9 @@
-<div *ngIf="form">
-  <h2>{{ form.title }}</h2>
-  <p>{{ form.description }}</p>
+<div class="form-container">
+  <button class="go-back-button" (click)="goBack()">Go Back</button>
+  <div *ngIf="form">
+    <h2 class="form-title">{{ form.title }}</h2>
+    <p class="form-description">{{ form.description }}</p>
+  </div>
+  <app-field *ngIf="form" [formId]="form.id"></app-field>
+  
 </div>
-<app-field [formId]="formId"></app-field>
-<app-field [fields]="form.fields"></app-field>

@@ -7,14 +7,16 @@ import { TalComponent } from './tal/tal.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { FieldComponent } from './field/field.component';
+import { AnswerComponent } from './answer/answer.component';
 
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
     FormComponent,
     TalComponent,
-      FieldComponent
+      FieldComponent,
+      AnswerComponent
    ],
   imports: [
     BrowserModule,

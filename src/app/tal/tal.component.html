@@ -1,7 +1,12 @@
+<div class="title-container">
+  <h1 class="title">Web Technologies Project</h1>
+  <h2 class="subtitle">Platform used for feedback related to the latest activities and events</h2>
+
 <div *ngFor="let form of forms">
   <div class="form-box">
     <h2>{{ form.title }}</h2>
     <p>{{ form.description }}</p>
     <button (click)="goToForm(form.id)">Go to Form</button>
   </div>
+</div>
 </div>

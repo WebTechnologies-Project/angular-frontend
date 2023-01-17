@@ -1,26 +1,45 @@
-.field {
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+.fields-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  .field-box {
+    width: 50%;
+    margin: 20px;
+    padding: 20px;
     box-shadow: 0px 0px 10px #ccc;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    text-align: center;
+
+    .field-content {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input[type='text'], input[type='radio'], input[type='checkbox'] {
+      margin-right: 10px;
+      padding: 10px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    input[type='range'] {
+      width: 80%;
+    }
   }
-  
-  .field p {
-    margin: 0;
+ 
+}
+
+.button{
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+  background-color: #3e8e41;
   }
-  
-  .field input[type="text"],
-  .field textarea {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-  }
-  
-  .field input[type="text"]:focus,
-  .field textarea:focus {
-    border: 2px solid #555;
-  }
+}

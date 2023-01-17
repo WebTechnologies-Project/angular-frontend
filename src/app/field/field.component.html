@@ -1,22 +1,20 @@
-<!-- <div *ngFor="let field of fields">
-  <div [ngSwitch]="field.type">
-    <div *ngSwitchCase="'text'">
-      <input type="text" [(ngModel)]="field.value" [placeholder]="field.content">
-    </div>
-    <div *ngSwitchCase="'checkbox'">
-      <input type="checkbox" [(ngModel)]="field.value" [placeholder]="field.content">
-    </div>
-    <div *ngSwitchCase="'range'">
-      <input type="range" [(ngModel)]="field.value" [placeholder]="field.content">
-    </div>
-    <div *ngSwitchCase="'radio'">
-      <input type="radio" [(ngModel)]="field.value" [placeholder]="field.content">
-    </div>
-    <div *ngSwitchDefault>
-      <p>{{ field.content }}</p>
+<form (ngSubmit)="onSubmit($event)">
+  <div class="fields-container">
+    <div class="field-box" *ngFor="let field of fields ">
+      <div class="field-content">{{field.content}}</div>
+      <div *ngIf="field.type === 'text'">
+        <input class="text-input" type="text" #answer>
+      </div>
+      <div *ngIf="field.type === 'radio'">
+        <input class="radio-input" type="radio"  [value]="option" *ngFor="let option of options" #answer> 
+      </div>
+      <div *ngIf="field.type === 'checkbox'">
+        <input class="checkbox-input" type="checkbox"  [value]="option" *ngFor="let option of options" #answer>
+      </div>
+      <div *ngIf="field.type === 'range'">
+        <input class="range-input" type="range"  [min]="range.min" [max]="range.max" #answer>
+      </div>
     </div>
   </div>
-</div> -->
-<div *ngFor="let field of fields">
-  <p>{{ field.content }}: {{ field.type }}</p>
-</div>
+  <button type="submit">Submit</button>
+</form>
