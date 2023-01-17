@@ -17,6 +17,9 @@ export class FormsService {
   getForms(): Observable<Form[]> {
     return this.http.get<Form[]>('http://localhost:8080/forms');
   }
+  getForm(id: number): Observable<Form> {
+    return this.http.get<Form>(`http://localhost:8080/forms/${id}`);
+  }
 
   
 }

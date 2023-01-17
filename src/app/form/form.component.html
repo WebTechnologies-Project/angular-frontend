@@ -1,9 +1,4 @@
-<div class="form">
-  <div class="head">
-      {{form.title}}
-    </div>
-    <div class="body">
-      <span> {{form.description}}</span>
-      
-    </div>
-  </div>
+<div *ngIf="form">
+  <h2>{{ form.title }}</h2>
+  <p>{{ form.description }}</p>
+</div>

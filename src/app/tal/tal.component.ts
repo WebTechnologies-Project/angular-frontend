@@ -16,7 +16,7 @@ export class TalComponent implements OnInit {
   
 
   constructor(
-    private formService: FormsService
+    private formService: FormsService,  private router: Router
   ) { }
 
   showAllForms() {
@@ -27,6 +27,10 @@ export class TalComponent implements OnInit {
 
   ngOnInit() {
     this.showAllForms();
+  }
+
+  goToForm(id: number) {
+    this.router.navigate(['form', id]);
   }
 
 }

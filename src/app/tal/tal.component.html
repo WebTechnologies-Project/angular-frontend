@@ -1,8 +1,7 @@
-<p>
-  tal works!
-</p>
 <div *ngFor="let form of forms">
-  <div>ID: {{ form.id }}</div>
-  <div>Title: {{ form.title }}</div>
-  <div>Description: {{ form.description }}</div>
+  <div class="form-box">
+    <h2>{{ form.title }}</h2>
+    <p>{{ form.description }}</p>
+    <button (click)="goToForm(form.id)">Go to Form</button>
+  </div>
 </div>

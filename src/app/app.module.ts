@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { TalComponent } from './tal/tal.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsService } from './service/forms.service';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -18,7 +17,8 @@ import { FormsService } from './service/forms.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

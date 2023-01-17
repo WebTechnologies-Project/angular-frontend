@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 export interface Card{
   title: string,
   bodyText: string,
@@ -13,6 +14,5 @@ export interface Card{
 })
 export class AppComponent {
   title = 'Web Technologies Project';
-forms: any;
   
 }
