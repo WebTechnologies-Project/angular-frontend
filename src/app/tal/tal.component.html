@@ -1,6 +1,8 @@
 <p>
   tal works!
 </p>
-<div class="app">
-  <app-form *ngFor="let form of forms" [form]="form"></app-form>
-  </div>
+<div *ngFor="let form of forms">
+  <div>ID: {{ form.id }}</div>
+  <div>Title: {{ form.title }}</div>
+  <div>Description: {{ form.description }}</div>
+</div>

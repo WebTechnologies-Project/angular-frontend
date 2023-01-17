@@ -16,25 +16,17 @@ export class TalComponent implements OnInit {
   
 
   constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-    private api: FormsService
+    private formService: FormsService
   ) { }
 
-  getAllforms() {
-    this.api
-      .getProduct()
-      .pipe(
-        tap((forms: Form[]) => {
-          this.forms = forms;
-        })
-      )
-      .subscribe();
-    console.log(this.forms);
+  showAllForms() {
+    this.formService.getForms().subscribe(forms => {
+      this.forms = forms;
+    });
   }
 
   ngOnInit() {
-    this.getAllforms();
+    this.showAllForms();
   }
 
 }

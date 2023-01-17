@@ -11,10 +11,10 @@ export class FormsService {
 
   constructor(private http: HttpClient) { }
   
-  postProduct(data: Form) {
+  postForms(data: Form) {
     return this.http.post<Form>('http://localhost:8080/forms/', data);
   }
-  getProduct(): Observable<Form[]> {
+  getForms(): Observable<Form[]> {
     return this.http.get<Form[]>('http://localhost:8080/forms');
   }
 

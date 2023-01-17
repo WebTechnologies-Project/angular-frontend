@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Form } from '../models/form';
+import { FormsService } from '../service/forms.service';
 
 @Component({
   selector: 'app-form',
@@ -13,5 +14,7 @@ export class FormComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  
 
 }
