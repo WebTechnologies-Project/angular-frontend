@@ -1,0 +1,22 @@
+<!-- <div *ngFor="let field of fields">
+  <div [ngSwitch]="field.type">
+    <div *ngSwitchCase="'text'">
+      <input type="text" [(ngModel)]="field.value" [placeholder]="field.content">
+    </div>
+    <div *ngSwitchCase="'checkbox'">
+      <input type="checkbox" [(ngModel)]="field.value" [placeholder]="field.content">
+    </div>
+    <div *ngSwitchCase="'range'">
+      <input type="range" [(ngModel)]="field.value" [placeholder]="field.content">
+    </div>
+    <div *ngSwitchCase="'radio'">
+      <input type="radio" [(ngModel)]="field.value" [placeholder]="field.content">
+    </div>
+    <div *ngSwitchDefault>
+      <p>{{ field.content }}</p>
+    </div>
+  </div>
+</div> -->
+<div *ngFor="let field of fields">
+  <p>{{ field.content }}: {{ field.type }}</p>
+</div>

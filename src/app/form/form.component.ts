@@ -11,6 +11,7 @@ import { FormsService } from '../service/forms.service';
 export class FormComponent implements OnInit {
 
   @Input() form: Form;
+  formId: number;
   constructor(private formsService: FormsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
